@@ -7,9 +7,9 @@ package paquete1;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Locale;
 import paquete2.InstitucionEducativa;
 import paquete2.Persona;
-import paquete2.Prestamo;
 import paquete3.PrestamoAutomovil;
 import paquete4.PrestamoEducativo;
 
@@ -21,7 +21,8 @@ public class Ejecutor {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-
+        entrada.useLocale(Locale.US);
+        
         boolean bandera = true;
         ArrayList<PrestamoAutomovil> listaPrestamoAutomovil = new ArrayList<>();
         ArrayList<PrestamoEducativo> listaPrestamoEducativo = new ArrayList<>();
@@ -51,7 +52,6 @@ public class Ejecutor {
                 String usuariob = entrada.nextLine();
                 System.out.println("Ciudad del préstamo:");
                 String ciudad = entrada.nextLine();
-                ciudad.toLowerCase();
                 System.out.println("Ingrese el valor del automovil:");
                 double valor = entrada.nextDouble();
                 System.out.println("Ingrese tiempo de préstamo en meses:");
